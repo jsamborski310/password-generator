@@ -19,71 +19,139 @@ var specialCharacters = [ "!", "$", "%", "&", "?" ];
 function generatePassword() {
 
 
-      //Password Length Validation
+//       //Password Length Validation
 
-        let passwordLength = prompt("Type the number of characters for password"); 
+//         let passwordLength = prompt("Type the number of characters for password"); 
     
-        if (passwordLength >= 8 && passwordLength <= 128) {
-            console.log(passwordLength);
-        } else { //Return forces the window to close. Ends the process.
-          return window.alert("Password does not meet requirements.");
-        }
+//         if (passwordLength >= 8 && passwordLength <= 128) {
+//             console.log(passwordLength);
+//         } else { //Return forces the window to close. Ends the process.
+//           return window.alert("Password does not meet requirements.");
+//         }
       
-      //Allows User to specify characters they want to use in password
+//       //Allows User to specify characters they want to use in password
 
-        let numericOption = confirm("Want numbers?"); 
-        if (numericOption) {
-         numericOption = numeric;
-         console.log(numericOption);
-       }
+//         let numericOption = confirm("Want numbers?"); 
+//         if (numericOption) {
+//          numericOption = numeric;
+//          console.log(numericOption);
+//        }
   
-        let lowercaseOption = confirm("Want lowercase?"); 
-        if (lowercaseOption) {
-          lowercaseOption = lowercase;
-          console.log(lowercaseOption);
-        }
+//         let lowercaseOption = confirm("Want lowercase?"); 
+//         if (lowercaseOption) {
+//           lowercaseOption = lowercase;
+//           console.log(lowercaseOption);
+//         }
         
-        let uppercaseOption = confirm("Want uppercase?"); 
-        if (uppercaseOption) {
-          uppercaseOption = uppercase;
-          console.log(uppercaseOption);
-        }
+//         let uppercaseOption = confirm("Want uppercase?"); 
+//         if (uppercaseOption) {
+//           uppercaseOption = uppercase;
+//           console.log(uppercaseOption);
+//         }
   
-        let specCharOption = confirm("Want special characters?"); 
-        if (specCharOption) {
-          specCharOption = specialCharacters;
-          console.log(specCharOption);
-        } 
+//         let specCharOption = confirm("Want special characters?"); 
+//         if (specCharOption) {
+//           specCharOption = specialCharacters;
+//           console.log(specCharOption);
+//         } 
 
-        //Ensures they select at least one option.
-        if (numericOption || lowercaseOption || uppercaseOption || specCharOption) {
-          window.alert("Success!");
+//         //Ensures they select at least one option.
+//         if (numericOption || lowercaseOption || uppercaseOption || specCharOption) {
+//           window.alert("Success!");
 
 
-          // var i = 0;
-          // for (var i = 0; i < passwordLength; i++)  {
-          //   console.log(i);
+//           // var i = 0;
+//           // for (var i = 0; i < passwordLength; i++)  {
+//           //   console.log(i);
 
           
 
             
-            //return newPassword;
-            // return this;
+//             //return newPassword;
+//             // return this;
 
-            //return Math.random(); //This is returning a number, but not exclusive to true statements. True statements need to go into their own string to then be randomized? 
-          //}
+//             //return Math.random(); //This is returning a number, but not exclusive to true statements. True statements need to go into their own string to then be randomized? 
+//           //}
           
 
-          //Need to take all true statements and place them in another  variable. 
+//           //Need to take all true statements and place them in another  variable. 
 
-        } else {
-          window.alert("You must choose one character type. Try again.");
-        }  
+//         } else {
+//           window.alert("You must choose one character type. Try again.");
+//         }  
         
+// }
+
+var password = "";
+
+//Password Length Validation
+
+let passwordLength = prompt("Type the number of characters for password"); 
+    
+if (passwordLength >= 8 && passwordLength <= 128) {
+    console.log(passwordLength);
+} else { //Return forces the window to close. Ends the process.
+  return window.alert("Password does not meet requirements.");
 }
 
+//Allows User to specify characters they want to use in password
+
+let numericOption = confirm("Want numbers?"); 
+if (numericOption) {
+  numericOption = numeric
+ password += numeric;
+
+}
+
+let lowercaseOption = confirm("Want lowercase?"); 
+if (lowercaseOption) {
+  lowercaseOption = lowercase;
+  password += lowercase;
+  
+}
+
+let uppercaseOption = confirm("Want uppercase?"); 
+if (uppercaseOption) {
+  uppercaseOption = uppercase;
+  password += uppercase;
+ 
+}
+
+let specCharOption = confirm("Want special characters?"); 
+if (specCharOption) {
+  specCharOption = specialCharacters;
+  password += specialCharacters;
+
+} 
+
+//Ensures they select at least one option.
+if (numericOption || lowercaseOption || uppercaseOption || specCharOption) {
+  window.alert("Success!");
+  console.log(password);
+  return password;
 
 
+  // var i = 0;
+  // for (var i = 0; i < passwordLength; i++)  {
+  //   console.log(i);
+
+  
+
+    
+    //return newPassword;
+    // return this;
+
+    //return Math.random(); //This is returning a number, but not exclusive to true statements. True statements need to go into their own string to then be randomized? 
+  //}
+  
+
+  //Need to take all true statements and place them in another  variable. 
+
+} else {
+  window.alert("You must choose one character type. Try again.");
+}  
+
+}
 
   
 
