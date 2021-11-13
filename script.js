@@ -13,95 +13,8 @@ var specialCharacters = [ "!", "$", "%", "&", "?" ];
 
 
 
+
 //*Function Here
-
-
-//function generatePassword() {
-
-
-
-//     let passwordLength = prompt("Type the number of characters for password"); {
-
-//         if (passwordLength >= 8 && passwordLength <= 128) {
-//             console.log(passwordLength);
-
-//             let numericOption = confirm("Want numbers?"); 
-//             console.log(numericOption);
-
-//             let lowercaseOption = confirm("Want lowercase?"); 
-//             console.log(lowercaseOption);
-
-//             let uppercaseOption = confirm("Want uppercase?"); 
-//             console.log(uppercaseOption);
-
-//             let specCharOption = confirm("Want special characters?"); 
-//             console.log(specCharOption);
-
-//         } else {
-//           window.alert("Password does not meet requirements.");
-//         }
-      
-//         if (numberOption || lowerCaseOption || uppercaseOption || specCharOption) {
-//             window.alert("Success! Grab your password below.");
-//             console.log();
-//         } else {
-//             window.alert("You must choose one character type. Try again.");
-//         }
-//     }
-// }
- 
-
-
-
-
-// function generatePassword() {
-
-
-
-//   function lengthVerification() {
-  
-//       let passwordLength = prompt("Type the number of characters for password"); 
-  
-//       if (passwordLength >= 8 && passwordLength <= 128) {
-//           console.log(passwordLength);
-//       } else {
-//         window.alert("Password does not meet requirements.");
-//       }
-//     }
-
-//   function characters () {
-
-//       let numericOption = confirm("Want numbers?"); 
-//       if (numericOption) {
-//         passwordRequirements += numeric;
-//       }
-
-//       let lowercaseOption = confirm("Want lowercase?"); 
-//       if (lowercaseOption) {
-//         passwordRequirement += lowercase;
-//         console.log(lowercaseOption);
-//       }
-      
-//       let uppercaseOption = confirm("Want uppercase?"); 
-//       if (uppercaseOption) {
-//         passwordRequirement += uppercase;
-//         console.log(uppercaseOption);
-//       }
-
-//       let specCharOption = confirm("Want special characters?"); 
-//       if (specCharOption) {
-//         passwordRequirement += specialCharacters;
-//         console.log(specCharOption);
-//       }
-//       // if (passwordRequirement) {
-//       //   window.alert("Success!");
-//       // }
-//       else {
-//         window.alert("You must choose one character type. Try again.");
-//       }
-//   }
-
-// }
 
 function generatePassword() {
 
@@ -140,44 +53,64 @@ function generatePassword() {
         if (specCharOption) {
           specCharOption = specialCharacters;
           console.log(specCharOption);
-
-}
+        } 
 
         //Ensures they select at least one option.
         if (numericOption || lowercaseOption || uppercaseOption || specCharOption) {
-          window.alert("Success!");
-        
+          window.alert("Success!"); {
+
+
+
+            
+            //return newPassword;
+            return this;
+
+            //return Math.random(); //This is returning a number, but not exclusive to true statements. True statements need to go into their own string to then be randomized? 
+          }
+          
+
+          //Need to take all true statements and place them in another  variable. 
+
         } else {
           window.alert("You must choose one character type. Try again.");
-        }    
-      }
+        }  
+        
+}
+
+
+        // for (var i = 0; i < passwordLength; i++) {
+        //   console.log(i);
+        // }
+
+
+      // generatePassword.length = passwordLength;
+        // fullPassword.length = passwordLength;
+        // fullPassword = passwordOptions(numpericOption || lowercaseOption || uppercaseOption || specCharOption);
+
+        // for (var i = 0; i < generatePassword.length; i++) {
+        //   console.log(generatePassword[i]);
+        // }
+        
+
+
+//Loop goes first then Random. 
+
+        // for (var i = 0; i < 5; i++) { 
+        //         console.log(generatePassword);
+        // }
+ 
+        // return Math.floor(Math.random() * max);
       
-      
-      generatePassword()
+
+
+
   
 
 //Instead of passwordRequirement +=... use an array, and add each of those into the array. 
 //Find out how to add variable values to an array?
 
-//if, else if (error message), else if (confirms), else. 
 //Look into "while" to see how to convert inputs into variable values.
 
-
-
-
-
-
-
-
-
-
-
-
-//*Loop it Here
-
-//for (var i = 0; i < passwordLength.length; i++) { 
-//  console.log(generatePassword[i]);
-//}
 
 
 

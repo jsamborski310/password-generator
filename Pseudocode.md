@@ -29,3 +29,10 @@ For each of the above, DECLARE a variable to store the value.
 - Randomly select a character from my list. 
 - Add our randomly selected character to our password string.
 - Repeat until the password reaches the requested length. 
+
+
+## Questions
+
+How do I loop only true statements?
+How do I pull true statements only into a new array? Is that recommended?
+How do I randomize only true statements?
