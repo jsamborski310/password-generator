@@ -57,16 +57,21 @@ function generatePassword() {
 
         //Ensures they select at least one option.
         if (numericOption || lowercaseOption || uppercaseOption || specCharOption) {
-          window.alert("Success!"); {
+          window.alert("Success!");
 
 
+          // var i = 0;
+          // for (var i = 0; i < passwordLength; i++)  {
+          //   console.log(i);
+
+          
 
             
             //return newPassword;
-            return this;
+            // return this;
 
             //return Math.random(); //This is returning a number, but not exclusive to true statements. True statements need to go into their own string to then be randomized? 
-          }
+          //}
           
 
           //Need to take all true statements and place them in another  variable. 
@@ -77,30 +82,6 @@ function generatePassword() {
         
 }
 
-
-        // for (var i = 0; i < passwordLength; i++) {
-        //   console.log(i);
-        // }
-
-
-      // generatePassword.length = passwordLength;
-        // fullPassword.length = passwordLength;
-        // fullPassword = passwordOptions(numpericOption || lowercaseOption || uppercaseOption || specCharOption);
-
-        // for (var i = 0; i < generatePassword.length; i++) {
-        //   console.log(generatePassword[i]);
-        // }
-        
-
-
-//Loop goes first then Random. 
-
-        // for (var i = 0; i < 5; i++) { 
-        //         console.log(generatePassword);
-        // }
- 
-        // return Math.floor(Math.random() * max);
-      
 
 
 
