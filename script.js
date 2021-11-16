@@ -2,16 +2,12 @@
 var generateBtn = document.querySelector("#generate");
 
 
-//*Declaring variables to store data.
+// Declaring variables to store data.
 
-
-  
-var numeric = [ "02345" ];
-var lowercase = [ "abcde" ];
-var uppercase = [ "ABCDE" ];
-var specialCharacters = [ "!$%&?" ];
-
-
+var numeric = ["023456789"];
+var lowercase = ["abcdefghijklmnopqrstuvwxyz"];
+var uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var specialCharacters = [" !#$%&'()*+,-./:;<=>?@[_'{| "];
 
 
 
@@ -20,226 +16,75 @@ var specialCharacters = [ "!$%&?" ];
 function generatePassword() {
 
 
-//       //Password Length Validation
 
-//         let passwordLength = prompt("Type the number of characters for password"); 
-    
-//         if (passwordLength >= 8 && passwordLength <= 128) {
-//             console.log(passwordLength);
-//         } else { //Return forces the window to close. Ends the process.
-//           return window.alert("Password does not meet requirements.");
-//         }
-      
-//       //Allows User to specify characters they want to use in password
+  var password = "";
 
-//         let numericOption = confirm("Want numbers?"); 
-//         if (numericOption) {
-//          numericOption = numeric;
-//          console.log(numericOption);
-//        }
-  
-//         let lowercaseOption = confirm("Want lowercase?"); 
-//         if (lowercaseOption) {
-//           lowercaseOption = lowercase;
-//           console.log(lowercaseOption);
-//         }
-        
-//         let uppercaseOption = confirm("Want uppercase?"); 
-//         if (uppercaseOption) {
-//           uppercaseOption = uppercase;
-//           console.log(uppercaseOption);
-//         }
-  
-//         let specCharOption = confirm("Want special characters?"); 
-//         if (specCharOption) {
-//           specCharOption = specialCharacters;
-//           console.log(specCharOption);
-//         } 
-
-//         //Ensures they select at least one option.
-//         if (numericOption || lowercaseOption || uppercaseOption || specCharOption) {
-//           window.alert("Success!");
-
-
-//           // var i = 0;
-//           // for (var i = 0; i < passwordLength; i++)  {
-//           //   console.log(i);
-
-          
-
-            
-//             //return newPassword;
-//             // return this;
-
-//             //return Math.random(); //This is returning a number, but not exclusive to true statements. True statements need to go into their own string to then be randomized? 
-//           //}
-          
-
-//           //Need to take all true statements and place them in another  variable. 
-
-//         } else {
-//           window.alert("You must choose one character type. Try again.");
-//         }  
-        
-// }
-
-// var password = "";
-
-
-// //Password Length Validation
-
-// let passwordLength = prompt("Type the number of characters for password"); 
-    
-// if (passwordLength >= 8 && passwordLength <= 128) {
-
-//     // password.length = passwordLength;
-
-//     console.log( "This is the length: " + passwordLength);
-
-
-// } else { //Return forces the window to close. Ends the process.
-//   return window.alert("Password does not meet requirements.");
-// }
-
-// //Allows User to specify characters they want to use in password
-
-// let numericOption = confirm("Want numbers?"); 
-// if (numericOption) {
-//   numericOption = numeric;
-//   password += numeric;
-
-// }
-
-// let lowercaseOption = confirm("Want lowercase?"); 
-// if (lowercaseOption) {
-//   lowercaseOption = lowercase;
-//   password += lowercase;
-  
-// }
-
-// let uppercaseOption = confirm("Want uppercase?"); 
-// if (uppercaseOption) {
-//   uppercaseOption = uppercase;
-//   password += uppercase;
- 
-// }
-
-// let specCharOption = confirm("Want special characters?"); 
-// if (specCharOption) {
-//   specCharOption = specialCharacters;
-//   password += specialCharacters;
-
-// } 
-
-// //Ensures they select at least one option.
-// if (numericOption || lowercaseOption || uppercaseOption || specCharOption) {
-//   alert("Success!");
-  
-
-  
-
-//   let randomPassword = "";
-
-//   for (let i = 0; i < passwordLength; i++) {
-
-//     randomPassword = Math.floor(Math.random() * passwordLength); {
-//       console.log(randomPassword); 
-//     }
-//     // randomPassword = password;
-//     // password = randomPassword; 
-
-    
-//   }
-    
-
-// return password; 
-
- 
-
-// } else {
-//   alert("You must choose one character type. Try again.");
-// }  
+  var passwordOptions = ""; // Allows values to be stored in one variable. Will be adding arrays that are selected in here. 
 
 
 
-// }
+  //Password Length Validation
 
-  
-var password = "";
-var passwordOptions = "";
+  let passwordLength = prompt("Type the number of characters you would like for your password.");
 
-//Password Length Validation
-
-let passwordLength = prompt("Type the number of characters for password"); 
-    
-if (passwordLength >= 8 && passwordLength <= 128) {
-
-    // password.length = passwordLength;
-
-    console.log( "This is the length: " + passwordLength);
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    console.log("This is the length: " + passwordLength);
 
 
-} else { //Return forces the window to close. Ends the process.
-  return window.alert("Password does not meet requirements.");
-}
-
-//Allows User to specify characters they want to use in password
-
-let numericOptionChoice = confirm("Want numbers?"); 
-if (numericOptionChoice) {
-  // numericOption = numeric;
-  passwordOptions += numeric;
-
-}
-
-let lowercaseOptionChoice = confirm("Want lowercase?"); 
-if (lowercaseOptionChoice) {
-  // lowercaseOption = lowercase;
-  passwordOptions += lowercase;
-  
-}
-
-let uppercaseOptionChoice = confirm("Want uppercase?"); 
-if (uppercaseOptionChoice) {
-  // uppercaseOption = uppercase;
-  passwordOptions += uppercase;
- 
-}
-
-let specCharOptionChoice = confirm("Want special characters?"); 
-if (specCharOptionChoice) {
-  // specCharOption = specialCharacters;
-  passwordOptions += specialCharacters;
-
-} 
-
-//Ensures they select at least one option.
-if (numericOptionChoice || lowercaseOptionChocie || uppercaseOptionChoice || specCharOptionChoice) {
-
-  window.alert("Success!");
-  
-      //Window closes if they press no on Special Characters.
-
-  
-
-
-  for (let i = 0; i < passwordLength; i++) {
-
-    password += passwordOptions[Math.floor(Math.random() * passwordOptions.length)] 
-    
-   
-
-    
+  } else { //Return forces the window to close. Ends the process.
+    return window.alert("Password does not meet requirements. You must select a number between 8 and 128. Try again.");
   }
-    
 
-return password; 
+  // Allows User to specify characters they want to use in password.
 
- 
+  let numericOptionChoice = confirm("Want to include numbers? If yes, click 'Okay'. ");
+  if (numericOptionChoice) {
+    passwordOptions += numeric;
 
-} else {
-  alert("You must choose one character type. Try again.");
-}  
+  }
+
+  let lowercaseOptionChoice = confirm("Want to include lowercase? If yes, click 'Okay'. ");
+  if (lowercaseOptionChoice) {
+    passwordOptions += lowercase;
+
+  }
+
+  let uppercaseOptionChoice = confirm("Want to include uppercase? If yes, click 'Okay'. ");
+  if (uppercaseOptionChoice) {
+    passwordOptions += uppercase;
+
+  }
+
+  let specCharOptionChoice = confirm("Want to include special characters? If yes, click 'Okay'. ");
+  if (specCharOptionChoice) {
+    passwordOptions += specialCharacters;
+
+  }
+
+  //Ensures they select at least one option.
+  if (numericOptionChoice || lowercaseOptionChocie || uppercaseOptionChoice || specCharOptionChoice) {
+
+    window.alert("Success!");
+
+    //Window closes if they press no on Special Characters.
+
+
+
+    for (let i = 0; i < passwordLength; i++) {
+
+      password += passwordOptions[Math.floor(Math.random() * passwordOptions.length)]
+
+
+    }
+
+
+    return password;
+
+
+
+  } else {
+    alert("Opps! You must choose one character type. Try again.");
+  }
 
 
 
