@@ -7,7 +7,7 @@ Need to store the following: numbers, letters, special characters.
 - List for all uppercase letters: (A-Z)
 - List for all special characters: (!-*)
 
-append to a string. 
+Append to a string. 
 
 # What does my app need to get from the User?
 
