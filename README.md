@@ -30,10 +30,12 @@ After some trial and error, office hours attendance, Googling and studying, the 
 ## Take a Look
 
 GitHub: https://github.com/jsamborski310/password-generator
+
 GitHub Pages: https://jsamborski310.github.io/password-generator/
 
 
 ## The Preview
 
 Here's a live screencast of the password generator in action: 
+
 https://www.loom.com/share/aa7cc41aaf31423e92c4523641f304e1
