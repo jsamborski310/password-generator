@@ -79,7 +79,7 @@ function generatePassword() {
 
     //If User fails to select at lease one character option, they will not receive a password and will see this message.
   } else {
-    alert("Opps! You must choose one character type. Try again.");
+    alert("Oops! You must choose one character type. Try again.");
   }
   
 
