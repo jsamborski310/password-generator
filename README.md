@@ -1,6 +1,6 @@
 # Password Generator
 
-Generates a random password.
+Application generates a random password.
 
 ## Overview
 
