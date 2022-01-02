@@ -1,5 +1,7 @@
 # Password Generator
 
+Generates a random password.
+
 ## Overview
 
 A password generator was created to produce a randomized password when specific criteria is met and based on User selection.  
